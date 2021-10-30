@@ -25,8 +25,13 @@ function teamMemberBuild(){
     console.log(internInfo)
 
     let html = generateHTML(employeeInfo, engineerInfo, managerInfo, internInfo)
-
-    fs.writeFile("./main/output/index.html, html")
+    fs.writeFile("./main/src/generateHTML.js", html, (err) => {
+        if (err)
+            console.log(err);
+        else {
+            console.log("File written successfully\n")
+        }
+    })
 };
 
 
@@ -66,11 +71,12 @@ function appChoices () {
                 "Employee", 
                 "Engineer", 
                 "Manager", 
-                "Intern"
+                "Intern",
+                "Complete"
                 // completed condidtion ________________________________________________________________????????
             ]
         }
-    ])
+    ]).
 
     then((choices) => {
         // choice = new function
@@ -119,7 +125,7 @@ function addEmployee() {
         let employee = new Employee(employeeAns.name, employeeAns.id, employeeAns.email);
         employeeInfo.push(employee);
         appChoices();
-    })
+    });
 }
 
 // ADD ENGINEER()>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -223,7 +229,8 @@ function addIntern() {
 
 // INITIAL FUNCTION TO ADD MANAGER>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 function init() {
-    console.log(`___________________________________________________________________________________________________________
+    console.log(`
+    ___________________________________________________________________________________________________________
 
     THE TEAM PROFILE GENERATOR.
 
