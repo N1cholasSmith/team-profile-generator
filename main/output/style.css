@@ -8,10 +8,10 @@ body {
     background-image: url("../../assets/images/office.png");
     background-repeat: no-repeat;
     background-size: cover;
-    height: auto;
-    width: 100%;
+    height: 100%;
+    width: auto;
     position: relative;
-    background-position: 50% 50%;
+    background-attachment: fixed;
     z-index: -1;
 }
 /* .background-img {

@@ -18,6 +18,7 @@ let engineerInfo = [];
 let managerInfo = [];
 let internInfo = [];
 
+
 function teamMemberBuild(){
     console.log(employeeInfo)
     console.log(engineerInfo)
@@ -68,9 +69,9 @@ function appChoices () {
             type: "list",
             name: "team",
             choices: [
-                "Employee", 
-                "Engineer", 
                 "Manager", 
+                "Engineer", 
+                "Employee", 
                 "Intern",
                 "Complete"
                 // completed condidtion ________________________________________________________________????????
@@ -106,6 +107,12 @@ function addEmployee() {
     inquirer.prompt([
         {
             type: "input",
+            message: "Employee Section:",
+            name: "employeeSection",
+            validate: (value)=>{if (value){return true} else {return "Please enter a value to continue"}},
+            },
+        {
+            type: "input",
             message: "Employee Name:",
             name: "name",
             validate: (value)=>{if (value){return true} else {return "Please enter a value to continue"}},
@@ -132,6 +139,12 @@ function addEmployee() {
 function addEngineer() {
     console.log("Adding Engineer")
     inquirer.prompt([
+        {
+            type: "input",
+            message: "Engineering Title:",
+            name: "engineeringTitle",
+            validate: (value)=>{if (value){return true} else {return "Please enter a value to continue"}},
+            },
         {
             type: "input",
             message: "Engineer Name:",
@@ -167,6 +180,12 @@ function addManager() {
     inquirer.prompt([
         {
             type: "input",
+            message: "Managerial Title:",
+            name: "managerTitle",
+            validate: (value)=>{if (value){return true} else {return "Please enter a value to continue"}},
+            },
+        {
+            type: "input",
             message: "Manager Name:",
             name: "name",
             validate: (value)=>{if (value){return true} else {return "Please enter a value to continue"}},
@@ -198,6 +217,12 @@ function addManager() {
 function addIntern() {
     console.log("Adding Intern")
     inquirer.prompt([
+        {
+            type: "input",
+            message: "Intern Section:",
+            name: "internSection",
+            validate: (value)=>{if (value){return true} else {return "Please enter a value to continue"}},
+            },
         {
             type: "input",
             message: "Intern Name:",
@@ -244,6 +269,110 @@ function init() {
         appChoices();
     });
 }
+
+function generateHTML(teamArray) {
+    //iterate through employees and send to appropriate function
+    //get the card for each employee type 
+    //once all employees are dealt with call finalHTML
+    let html = "";
+    html +=
+    `
+    <section id="Managers">
+        <div class="container my-5 py-5">
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h1 class="fw-bold text-center">${Manager.role}</h1>
+                    <hr>
+                </div>
+                    <div class="row">
+                    ${managerCard}
+                    </div>
+                </div>
+        
+    </section>
+    `
+
+} 
+
+// MANAGER CARD GENERATE 
+function managerCard(manager){
+    //html for manager (returns a string of a bootstrap card html for the manager)
+
+    let html = "";
+    html +=
+    `<div class="col-sm-12 col-md-6 col-lg-3">
+        <div class="card p-4" >
+            <img src="../../assets/images/manager.png" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+                <h2>${answer.addManager.managerTitle}</h2>
+                <h5>Name:${answer.addManager.name}</h5>
+                <h5>Id:${answer.addManager.id}</h5>
+                <h5>Email:${answer.addManager.email}</h5>
+                <h5>Office PH:${answer.addManager.officeNumber}</h5>
+            </div>
+        </div>
+    </div>`
+    
+}
+
+// ENGINEER CARD GENERATE
+function engineerCard(engineer){
+    //html for manager (returns a string of a bootstrap card html for the manager)
+    let html = "";
+    html +=
+    `<div class="col-sm-12 col-md-6 col-lg-3">
+        <div class="card p-4" >
+            <img src="../../assets/images/manager.png" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+                <h2>${answer.addEngineer.engineerTitle}</h2>
+                <h5>Name:${answer.addEngineer.name}</h5>
+                <h5>Id:${answer.addEngineer.id}</h5>
+                <h5>Email:${answer.addEngineer.email}</h5>
+            </div>
+        </div>
+    </div>`
+}
+
+// EMPLOYEE CARD GENERATE
+function employeeCard(employee){
+    let html = "";
+    html +=
+    `<div class="col-sm-12 col-md-6 col-lg-3">
+        <div class="card p-4" >
+            <img src="../../assets/images/manager.png" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+                <h2>${answer.addEmployee.employeeSection}</h2>
+                <h5>Name:${answer.addEmployee.name}</h5>
+                <h5>Id:${answer.addEmployee.id}</h5>
+                <h5>Email:${answer.addEmployee.email}</h5>
+                <h5>Office PH:${answer.addEmployee.github}</h5>
+            </div>
+        </div>
+    </div>`
+    //html for manager (returns a string of a bootstrap card html for the manager)
+}
+
+// INTERN CARD GENERATE
+function internCard(intern){
+    let html = "";
+    html +=
+    `<div class="col-sm-12 col-md-6 col-lg-3">
+        <div class="card p-4" >
+            <img src="../../assets/images/manager.png" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+                <h2>${answer.addIntern.internSection} Intern</h2>
+                <h5>Name:${answer.addIntern.name}</h5>
+                <h5>Id:${answer.addIntern.id}</h5>
+                <h5>Email:${answer.addIntern.email}</h5>
+                <h5>Office PH:${answer.addIntern.github}</h5>
+            </div>
+        </div>
+    </div>`
+    //html for manager (returns a string of a bootstrap card html for the manager)
+
+}
+
+
    
   
 init();
