@@ -66,8 +66,8 @@ function appChoices () {
                 "Employee", 
                 "Engineer", 
                 "Manager", 
-                "Intern", 
-                "Done"
+                "Intern"
+                // completed condidtion ________________________________________________________________????????
             ]
         }
     ])
@@ -142,7 +142,7 @@ function addEngineer() {
             type: "input",
             message: "Engineer Email",
             name: "email"
-        }
+            },
         {
             type: "input",
             message: "GitHub Username:",
@@ -208,7 +208,7 @@ function addIntern() {
             type: "input",
             message: "Intern Email",
             name: "email"
-        }
+            },
         {
             type: "input",
             message: "Intern School:",

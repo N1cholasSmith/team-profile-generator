@@ -142,13 +142,13 @@ const generateHTML = (answers) => {
   </html>`;
 }
 // Bonus using writeFileAsync as a promise
-const init = () => {
-  promptUser()
-    .then((answers) => writeFileAsync('index.html', generateHTML(answers)))
-    .then(() => console.log('Successfully wrote to index.html'))
-    .catch((err) => console.error(err));
-};
+// const init = () => {
+//   promptUser()
+//     .then((answers) => writeFileAsync('index.html', generateHTML(answers)))
+//     .then(() => console.log('Successfully wrote to index.html'))
+//     .catch((err) => console.error(err));
+// };
 
-init();
+// init();
 
 // just use 
