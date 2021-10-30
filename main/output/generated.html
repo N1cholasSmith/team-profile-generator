@@ -1,89 +1,4 @@
-const Employee = require("../lib/employee");
-const Engineer = require("../lib/engineer");
-const Manager = require("../lib/manager");
-const Intern = require("../lib/intern");
-
-// MANAGER CARD GENERATE 
-function managerCard(manager){
-  //html for manager (returns a string of a bootstrap card html for the manager)
-  console.log(manager)
-  return `<div class="col-sm-12 col-md-6 col-lg-3">
-      <div class="card p-4" >
-          <img src="../../assets/images/manager.png" class="card-img-top" alt="...">
-          <div class="card-body text-center">
-              <h2>${manager.managerTitle}</h2>
-              <h5>Name:${manager.name}</h5>
-              <h5>Id:${manager.id}</h5>
-              <h5>Email:${manager.email}</h5>
-              <h5>Office PH:${manager.officeNumber}</h5>
-          </div>
-      </div>
-  </div>`
-}
-
-// ENGINEER CARD GENERATE
-function engineerCard(engineer){
-  //html for manager (returns a string of a bootstrap card html for the manager)
-  let html = "";
-  html +=
-  `<div class="col-sm-12 col-md-6 col-lg-3">
-      <div class="card p-4" >
-          <img src="../../assets/images/engineer.png" class="card-img-top" alt="...">
-          <div class="card-body text-center">
-              <h2>${engineer.engineerTitle}</h2>
-              <h5>Name:${engineer.name}</h5>
-              <h5>Id:${engineer.id}</h5>
-              <h5>Email:${engineer.email}</h5>
-          </div>
-      </div>
-  </div>`
-}
-
-// EMPLOYEE CARD GENERATE
-function employeeCard(employee){
-  let html = "";
-  html +=
-  `<div class="col-sm-12 col-md-6 col-lg-3">
-      <div class="card p-4" >
-          <img src="../../assets/images/employee.png" class="card-img-top" alt="...">
-          <div class="card-body text-center">
-              <h2>${employee.employeeSection}</h2>
-              <h5>Name:${employee.name}</h5>
-              <h5>Id:${employee.id}</h5>
-              <h5>Email:${employee.email}</h5>
-          </div>
-      </div>
-  </div>`
-  //html for manager (returns a string of a bootstrap card html for the manager)
-}
-
-// INTERN CARD GENERATE
-function internCard(intern){
-  let html = "";
-  html +=
-  `<div class="col-sm-12 col-md-6 col-lg-3">
-      <div class="card p-4" >
-          <img src="../../assets/images/intern.png" class="card-img-top" alt="...">
-          <div class="card-body text-center">
-              <h2>${intern.internSection} Intern</h2>
-              <h5>Name:${intern.name}</h5>
-              <h5>Id:${intern.id}</h5>
-              <h5>Email:${intern.email}</h5>
-              <h5>School:${intern.school}</h5>
-          </div>
-      </div>
-  </div>`
-  //html for manager (returns a string of a bootstrap card html for the manager)
-
-}
-
-function generateHTML(employeeArray, engineerArray, managerArray, internArray){
-  //join all html card strings for each employee
-  //iterate through employees and send to appropriate function
-  //get the card for each employee type 
-  //once all employees are dealt with call finalHTML
-
-return `<!doctype html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -148,9 +63,29 @@ return `<!doctype html>
           <hr>
         </div>
         <div class="row d-flex justify-content-center">
-        ${managerArray.map(manager => {
-          return managerCard(manager)
-        }).join()};
+        <div class="col-sm-12 col-md-6 col-lg-3">
+      <div class="card p-4" >
+          <img src="../../assets/images/manager.png" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+              <h2>undefined</h2>
+              <h5>Name:nick</h5>
+              <h5>Id:681351</h5>
+              <h5>Email:nick@Gmail.com</h5>
+              <h5>Office PH:51654</h5>
+          </div>
+      </div>
+  </div>,<div class="col-sm-12 col-md-6 col-lg-3">
+      <div class="card p-4" >
+          <img src="../../assets/images/manager.png" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+              <h2>undefined</h2>
+              <h5>Name:3518</h5>
+              <h5>Id:35156</h5>
+              <h5>Email:tom@Gmail.com</h5>
+              <h5>Office PH:681638</h5>
+          </div>
+      </div>
+  </div>
         </div>
       </div>
     </div>
@@ -166,9 +101,22 @@ return `<!doctype html>
           <hr>
         </div>
         <div class="row d-flex justify-content-center">
-        ${managerArray.map(engineer => {
-          return engineerCard(engineer)
-        }).join()};
+        function engineerCard(engineer){
+  //html for manager (returns a string of a bootstrap card html for the manager)
+  let html = "";
+  html +=
+  `<div class="col-sm-12 col-md-6 col-lg-3">
+      <div class="card p-4" >
+          <img src="../../assets/images/manager.png" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+              <h2>${answer.addEngineer.engineerTitle}</h2>
+              <h5>Name:${answer.addEngineer.name}</h5>
+              <h5>Id:${answer.addEngineer.id}</h5>
+              <h5>Email:${answer.addEngineer.email}</h5>
+          </div>
+      </div>
+  </div>`
+}
         </div>
       </div>
     </div>
@@ -183,9 +131,23 @@ return `<!doctype html>
           <hr>
         </div>
         <div class="row d-flex justify-content-center">
-        ${managerArray.map(employee => {
-          return employeeCard(employee)
-        }).join()};
+        function employeeCard(employee){
+  let html = "";
+  html +=
+  `<div class="col-sm-12 col-md-6 col-lg-3">
+      <div class="card p-4" >
+          <img src="../../assets/images/manager.png" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+              <h2>${answer.addEmployee.employeeSection}</h2>
+              <h5>Name:${answer.addEmployee.name}</h5>
+              <h5>Id:${answer.addEmployee.id}</h5>
+              <h5>Email:${answer.addEmployee.email}</h5>
+              <h5>Office PH:${answer.addEmployee.github}</h5>
+          </div>
+      </div>
+  </div>`
+  //html for manager (returns a string of a bootstrap card html for the manager)
+}
         </div>
       </div>
     </div>
@@ -200,9 +162,24 @@ return `<!doctype html>
           <hr>
         </div>
         <div class="row d-flex justify-content-center">
-        ${managerArray.map(intern => {
-          return internCard(intern)
-        }).join()}; 
+        function internCard(intern){
+  let html = "";
+  html +=
+  `<div class="col-sm-12 col-md-6 col-lg-3">
+      <div class="card p-4" >
+          <img src="../../assets/images/manager.png" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+              <h2>${answer.addIntern.internSection} Intern</h2>
+              <h5>Name:${answer.addIntern.name}</h5>
+              <h5>Id:${answer.addIntern.id}</h5>
+              <h5>Email:${answer.addIntern.email}</h5>
+              <h5>Office PH:${answer.addIntern.github}</h5>
+          </div>
+      </div>
+  </div>`
+  //html for manager (returns a string of a bootstrap card html for the manager)
+
+} 
         </div>
       </div>
     </div>
@@ -225,7 +202,4 @@ return `<!doctype html>
   }
   </script>
 
-</body>`
-}
-
-module.exports = generateHTML;
+</body>
