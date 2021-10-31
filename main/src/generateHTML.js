@@ -10,7 +10,7 @@ function managerCard(manager){
       <div class="card p-4" >
           <img src="../../assets/images/manager.png" class="card-img-top" alt="...">
           <div class="card-body text-center">
-              <h2>${manager.managerTitle}</h2>
+              <h2>${manager.section}</h2>
               <h5>Name:${manager.name}</h5>
               <h5>Id:${manager.id}</h5>
               <h5>Email:${manager.email}</h5>
@@ -27,7 +27,7 @@ function engineerCard(engineer){
       <div class="card p-4" >
           <img src="../../assets/images/engineer.png" class="card-img-top" alt="...">
           <div class="card-body text-center">
-              <h2>${engineer.engineerTitle}</h2>
+              <h2>${engineer.section}</h2>
               <h5>Name:${engineer.name}</h5>
               <h5>Id:${engineer.id}</h5>
               <h5>Email:${engineer.email}</h5>
@@ -43,7 +43,7 @@ function employeeCard(employee){
       <div class="card p-4" >
           <img src="../../assets/images/employee.png" class="card-img-top" alt="...">
           <div class="card-body text-center">
-              <h2>${employee.employeeSection}</h2>
+              <h2>${employee.section}</h2>
               <h5>Name:${employee.name}</h5>
               <h5>Id:${employee.id}</h5>
               <h5>Email:${employee.email}</h5>
@@ -59,7 +59,7 @@ function internCard(intern){
       <div class="card p-4" >
           <img src="../../assets/images/intern.png" class="card-img-top" alt="...">
           <div class="card-body text-center">
-              <h2>${intern.internSection} Intern</h2>
+              <h2>${intern.section} Intern</h2>
               <h5>Name:${intern.name}</h5>
               <h5>Id:${intern.id}</h5>
               <h5>Email:${intern.email}</h5>
@@ -101,7 +101,7 @@ return `<!doctype html>
 <!-- navbar -------------------------------------------------------------------------------------------------------------->
   <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
     <div class="container-fluid">
-        <a class="navbar-brand fw-bold" href="#project">Team Profiles</a>
+        <a class="navbar-brand fw-bold">Team Profiles</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -128,11 +128,11 @@ return `<!doctype html>
 
 <!-- Team Profile Cards --------------------------------------------------------------------------------------------------->
   <!-- Manager Section ------------------------------------------------->
-  <section id="Managers">
+  <section id="Manager">
     <div class="container my-5 py-5">
       <div class="row mb-5">
         <div class="col-12">
-          <h1 class="fw-bold text-center">Managers</h1>
+          <h1 class="fw-bold text-center">MANAGERS</h1>
           <hr>
         </div>
         <div class="row d-flex justify-content-center">
@@ -146,11 +146,11 @@ return `<!doctype html>
 
   
   <!-- Engineers Section  ---------------------------------------------->
-  <section id="engineers">
+  <section id="Engineer">
     <div class="container my-5 py-5">
       <div class="row mb-5">
         <div class="col-12">
-          <h1 class="fw-bold text-center">Engineers</h1>
+          <h1 class="fw-bold text-center">ENGINEERS</h1>
           <hr>
         </div>
         <div class="row d-flex justify-content-center">
@@ -163,11 +163,11 @@ return `<!doctype html>
   </section>
 
   <!-- Employees ------------------------------------------------------->
-  <section id="employee">
+  <section id="Employee">
     <div class="container my-5 py-5">
       <div class="row mb-5">
         <div class="col-12">
-          <h1 class="fw-bold text-center">Employees</h1>
+          <h1 class="fw-bold text-center">EMPLOYEES</h1>
           <hr>
         </div>
         <div class="row d-flex justify-content-center">
@@ -180,11 +180,11 @@ return `<!doctype html>
   </section>
 
   <!-- Interns ------------------------------------------------------->
-  <section id="intern">
+  <section id="Intern">
     <div class="container my-5 py-5">
       <div class="row mb-5">
         <div class="col-12">
-          <h1 class="fw-bold text-center">Interns</h1>
+          <h1 class="fw-bold text-center">INTERNS</h1>
           <hr>
         </div>
         <div class="row d-flex justify-content-center">

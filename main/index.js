@@ -114,7 +114,7 @@ function addEmployee() {
         {
             type: "input",
             message: "Employee Section:",
-            name: "employeeSection",
+            name: "section",
             validate: (value)=>{if (value){return true} else {return "Please enter a value to continue"}},
             },
         {
@@ -135,7 +135,7 @@ function addEmployee() {
             name: "email"
         }
     ]).then((employeeAns) => {
-        let employee = new Employee(employeeAns.employeeSection, employeeAns.name, employeeAns.id, employeeAns.email);
+        let employee = new Employee(employeeAns.section, employeeAns.name, employeeAns.id, employeeAns.email);
         employeeArray.push(employee);
         appChoices();
     });
@@ -148,7 +148,7 @@ function addEngineer() {
         {
             type: "input",
             message: "Engineering Title:",
-            name: "engineeringTitle",
+            name: "section",
             validate: (value)=>{if (value){return true} else {return "Please enter a value to continue"}},
             },
         {
@@ -165,7 +165,7 @@ function addEngineer() {
             },
         {
             type: "input",
-            message: "Engineer Email",
+            message: "Engineer Email:",
             name: "email"
             },
         {
@@ -174,7 +174,7 @@ function addEngineer() {
             name: "github"
         },
     ]).then((engineerAns) => {
-        let engineer = new Engineer(engineerAns.engineeringTitle, engineerAns.name, engineerAns.id, engineerAns.email, engineerAns.github);
+        let engineer = new Engineer(engineerAns.section, engineerAns.name, engineerAns.id, engineerAns.email, engineerAns.github);
         engineerArray.push(engineer);
         appChoices();
     })
@@ -187,7 +187,7 @@ function addManager() {
         {
             type: "input",
             message: "Managerial Title:",
-            name: "managerTitle",
+            name: "section",
             validate: (value)=>{if (value){return true} else {return "Please enter a value to continue"}},
             },
         {
@@ -213,7 +213,7 @@ function addManager() {
             name: "officeNumber",  
             }, 
     ]).then((managerAns) => {
-        let manager = new Manager (managerAns.managerTitle, managerAns.name, managerAns.id, managerAns.email, managerAns.officeNumber);
+        let manager = new Manager (managerAns.section, managerAns.name, managerAns.id, managerAns.email, managerAns.officeNumber);
         managerArray.push(manager);
         appChoices();
     });
@@ -226,7 +226,7 @@ function addIntern() {
         {
             type: "input",
             message: "Intern Section:",
-            name: "internSection",
+            name: "section",
             validate: (value)=>{if (value){return true} else {return "Please enter a value to continue"}},
             },
         {
@@ -243,7 +243,7 @@ function addIntern() {
             },
         {
             type: "input",
-            message: "Intern Email",
+            message: "Intern Email:",
             name: "email"
             },
         {
@@ -252,7 +252,7 @@ function addIntern() {
             name: "school"
         },
     ]).then((internAns) => {
-        let intern = new Intern(internAns.internSection, internAns.name, internAns.id, internAns.email, internAns.school);
+        let intern = new Intern(internAns.section, internAns.name, internAns.id, internAns.email, internAns.school);
         internArray.push(intern);
         appChoices();
     })
