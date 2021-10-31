@@ -9,7 +9,7 @@ The Team Profile Generator is web application that utilizes Node.js modules such
 
 [teamprofilegenerator.com]
 
-(https://n1cholassmith.github.io/team-profile-generator/)
+https://n1cholassmith.github.io/team-profile-generator/
 
 ---
 ## Table of Contents
