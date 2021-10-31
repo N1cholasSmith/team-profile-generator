@@ -13,7 +13,7 @@ function managerCard(manager){
               <h2>${manager.section}</h2>
               <h5>Name:${manager.name}</h5>
               <h5>Id:${manager.id}</h5>
-              <h5>Email:${manager.email}</h5>
+              <h5>Email:<a href="mailto:$${manager.email}">${manager.email}</a></h5>
               <h5>Office PH:${manager.officeNumber}</h5>
           </div>
       </div>
@@ -30,8 +30,8 @@ function engineerCard(engineer){
               <h2>${engineer.section}</h2>
               <h5>Name:${engineer.name}</h5>
               <h5>Id:${engineer.id}</h5>
-              <h5>Email:${engineer.email}</h5>
-              <h5>GitHub:${engineer.github}</h5>
+              <h5>Email:<a href="mailto:${engineer.email}">${engineer.email}</a></h5>
+              <h5>GitHub:<a href="https://github.com/${engineer.github}">${engineer.github}</a></h5>
           </div>
       </div>
   </div>`
@@ -47,7 +47,7 @@ function employeeCard(employee){
               <h2>${employee.section}</h2>
               <h5>Name:${employee.name}</h5>
               <h5>Id:${employee.id}</h5>
-              <h5>Email:${employee.email}</h5>
+              <h5>Email:<a href="mailto:${employee.email}">${employee.email}</a></h5>
           </div>
       </div>
   </div>`
@@ -63,7 +63,7 @@ function internCard(intern){
               <h2>${intern.section} Intern</h2>
               <h5>Name:${intern.name}</h5>
               <h5>Id:${intern.id}</h5>
-              <h5>Email:${intern.email}</h5>
+              <h5>Email:<a href="mailto:${intern.email}">${intern.email}</a></h5>
               <h5>School:${intern.school}</h5>
           </div>
       </div>
