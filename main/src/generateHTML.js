@@ -11,9 +11,9 @@ function managerCard(manager){
           <img src="../../assets/images/manager.png" class="card-img-top" alt="...">
           <div class="card-body text-center">
               <h2>${manager.section}</h2>
-              <h5>Name:${manager.name}</h5>
-              <h5>Id:${manager.id}</h5>
-              <h5>Email:<a href="mailto:$${manager.email}">${manager.email}</a></h5>
+              <h5>Name: ${manager.name}</h5>
+              <h5>ID: ${manager.id}</h5>
+              <h5>Email:<a href="mailto:${manager.email}">${manager.email}</a></h5>
               <h5>Office PH:${manager.officeNumber}</h5>
           </div>
       </div>
@@ -29,9 +29,9 @@ function engineerCard(engineer){
           <div class="card-body text-center">
               <h2>${engineer.section}</h2>
               <h5>Name:${engineer.name}</h5>
-              <h5>Id:${engineer.id}</h5>
+              <h5>ID:${engineer.id}</h5>
               <h5>Email:<a href="mailto:${engineer.email}">${engineer.email}</a></h5>
-              <h5>GitHub:<a href="https://github.com/${engineer.github}">${engineer.github}</a></h5>
+              <h5>GitHub:<a href="https://github.com/${engineer.github}" target="_blank">${engineer.github}</a></h5>
           </div>
       </div>
   </div>`
@@ -46,7 +46,7 @@ function employeeCard(employee){
           <div class="card-body text-center">
               <h2>${employee.section}</h2>
               <h5>Name:${employee.name}</h5>
-              <h5>Id:${employee.id}</h5>
+              <h5>ID:${employee.id}</h5>
               <h5>Email:<a href="mailto:${employee.email}">${employee.email}</a></h5>
           </div>
       </div>
@@ -62,7 +62,7 @@ function internCard(intern){
           <div class="card-body text-center">
               <h2>${intern.section} Intern</h2>
               <h5>Name:${intern.name}</h5>
-              <h5>Id:${intern.id}</h5>
+              <h5>ID:${intern.id}</h5>
               <h5>Email:<a href="mailto:${intern.email}">${intern.email}</a></h5>
               <h5>School:${intern.school}</h5>
           </div>
@@ -79,7 +79,7 @@ return `<!doctype html>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Team Profile Generator which utilizes node.js inquirer and jest for testing">
+    <meta name="description" content="Team Profile Generator utilizes node.js, inquirer and jest to dynamically add Team Member Profiles">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -95,7 +95,7 @@ return `<!doctype html>
 
 
 
-    <title>Team Profile Generator</title>
+    <title>Team Profile Page</title>
 </head>
 
 <body>
@@ -139,7 +139,7 @@ return `<!doctype html>
         <div class="row d-flex justify-content-center align-self-normal">
         ${managerArray.map(manager => {
           return managerCard(manager)
-        }).join()};
+        }).join()}
         </div>
       </div>
     </div>
@@ -157,7 +157,7 @@ return `<!doctype html>
         <div class="row d-flex justify-content-center align-self-normal">
         ${engineerArray.map(engineer => {
           return engineerCard(engineer)
-        }).join()};
+        }).join()}
         </div>
       </div>
     </div>
@@ -174,7 +174,7 @@ return `<!doctype html>
         <div class="row d-flex justify-content-center align-self-normal">
         ${employeeArray.map(employee => {
           return employeeCard(employee)
-        }).join()};
+        }).join()}
         </div>
       </div>
     </div>
@@ -191,7 +191,7 @@ return `<!doctype html>
         <div class="row d-flex justify-content-center align-self-normal">
         ${internArray.map(intern => {
           return internCard(intern)
-        }).join()}; 
+        }).join()} 
         </div>
       </div>
     </div>

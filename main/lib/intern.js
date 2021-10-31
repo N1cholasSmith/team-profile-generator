@@ -18,13 +18,8 @@ class Intern extends Employee{
     getEmail(){
         return this.email
     }
-    getRole(){
-        return this.role
-    }
     getSchool(){
         return this.school
     }
-
-
 }
 module.exports = Intern;

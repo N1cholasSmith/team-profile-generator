@@ -209,7 +209,7 @@ function addEmployee() {
             },
         {
             type: "input",
-            message: "Employee Email",
+            message: "Employee Email:",
             name: "email"
         }
     ]).then((employeeAns) => {

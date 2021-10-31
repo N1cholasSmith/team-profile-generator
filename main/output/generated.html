@@ -2,58 +2,58 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Team Profile Generator which utilizes node.js inquirer and jest for testing">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Team Profile Generator utilizes node.js, inquirer and jest to dynamically add Team Member Profiles">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <!-- StylesSheet -->
-    <link rel="stylesheet" href="style.css">
+  <!-- StylesSheet -->
+  <link rel="stylesheet" href="style.css">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
 
 
 
-    <title>Team Profile Generator</title>
+  <title>Team Profile Page</title>
 </head>
 
 <body>
-<!-- navbar -------------------------------------------------------------------------------------------------------------->
+  <!-- navbar -------------------------------------------------------------------------------------------------------------->
   <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
     <div class="container-fluid">
-        <a class="navbar-brand fw-bold">Team Profiles</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link px-4" href="#Employee">Employee</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link px-4" href="#Manager">Manager</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link px-4" href="#Engineer">Engineer</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link px-4" href="#Intern">Intern</a>
-                </li>
-            </ul>
-            </li>
-        </div>
+      <a class="navbar-brand fw-bold">Team Profiles</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link px-4" href="#Employee">Employee</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-4" href="#Manager">Manager</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-4" href="#Engineer">Engineer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-4" href="#Intern">Intern</a>
+          </li>
+        </ul>
+        </li>
+      </div>
     </div>
   </nav>
 
-<!-- Team Profile Cards --------------------------------------------------------------------------------------------------->
+  <!-- Team Profile Cards --------------------------------------------------------------------------------------------------->
   <!-- Manager Section ------------------------------------------------->
   <section id="Manager">
     <div class="container my-5 py-5">
@@ -63,24 +63,60 @@
           <hr>
         </div>
         <div class="row d-flex justify-content-center align-self-normal">
-        <div class="col-sm-12 col-md-6 col-lg-3">
-      <div class="card p-4 my-2" >
-          <img src="../../assets/images/manager.png" class="card-img-top" alt="...">
-          <div class="card-body text-center">
-              <h2>sales</h2>
-              <h5>Name:nick</h5>
-              <h5>Id:68135163</h5>
-              <h5>Email:nicksales@gmail.com</h5>
-              <h5>Office PH:351566</h5>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card p-4 my-2">
+              <img src="../../assets/images/manager.png" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h2>Head Manager</h2>
+                <h5>Name: Nicholas Smith</h5>
+                <h5>ID: 8604797</h5>
+                <h5>Email:<a href="mailto:$nicholassmith@gmail.com">nicholassmith@gmail.com</a></h5>
+                <h5>Office PH:0474 444 144</h5>
+              </div>
+            </div>
           </div>
-      </div>
-  </div>;
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card p-4 my-2">
+              <img src="../../assets/images/manager.png" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h2>Software Manager</h2>
+                <h5>Name: Sophie Benz</h5>
+                <h5>ID: 8241567</h5>
+                <h5>Email:<a href="mailto:$sophie.benz@gmail.com">sophie.benz@gmail.com</a></h5>
+                <h5>Office PH:0474 456 378</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card p-4 my-2">
+              <img src="../../assets/images/manager.png" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h2>Training Manager</h2>
+                <h5>Name: Lance Daniels</h5>
+                <h5>ID: 5611281</h5>
+                <h5>Email:<a href="mailto:$lancedaniels@gmail.com">lancedaniels@gmail.com</a></h5>
+                <h5>Office PH:0465 295 632</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card p-4 my-2">
+              <img src="../../assets/images/manager.png" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h2>Sales Manager</h2>
+                <h5>Name: Torie Male</h5>
+                <h5>ID: 7645121</h5>
+                <h5>Email:<a href="mailto:$toriemale.sales@gmail.com">toriemale.sales@gmail.com</a></h5>
+                <h5>Office PH:0461 235 786</h5>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  
+
   <!-- Engineers Section  ---------------------------------------------->
   <section id="Engineer">
     <div class="container my-5 py-5">
@@ -90,18 +126,30 @@
           <hr>
         </div>
         <div class="row d-flex justify-content-center align-self-normal">
-        <div class="col-sm-12 col-md-6 col-lg-3">
-      <div class="card p-4 my-2" >
-          <img src="../../assets/images/engineer.png" class="card-img-top" alt="...">
-          <div class="card-body text-center">
-              <h2>Software Engineer</h2>
-              <h5>Name:Ruby Fields</h5>
-              <h5>Id:6513165</h5>
-              <h5>Email:<a href="mailto:rubyfields@gmail.com">rubyfields@gmail.com</a></h5>
-              <h5>GitHub:<a href="https://github.com/N1cholasSmith">N1cholasSmith</a></h5>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card p-4 my-2">
+              <img src="../../assets/images/engineer.png" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h2>Software Engineer</h2>
+                <h5>Name: Jerry Dilinger</h5>
+                <h5>ID: 8463254</h5>
+                <h5>Email:<a href="mailto:jerry.dilinger@gmail.com">jerry.dilinger@gmail.com</a></h5>
+                <h5>GitHub:<a href="https://github.com/JerryDilingerDev" target="_blank">JerryDilingerDev</a></h5>
+              </div>
+            </div>
           </div>
-      </div>
-  </div>;
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card p-4 my-2">
+              <img src="../../assets/images/engineer.png" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h2>Innovations Engineer</h2>
+                <h5>Name: Steve Shanley</h5>
+                <h5>ID: 6458793</h5>
+                <h5>Email:<a href="mailto:steveshanley@gmail.com">steveshanley@gmail.com</a></h5>
+                <h5>GitHub:<a href="https://github.com/N1cholasSmith" target="_blank">N1cholasSmith</a></h5>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -116,7 +164,83 @@
           <hr>
         </div>
         <div class="row d-flex justify-content-center align-self-normal">
-        ;
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card p-4 my-2">
+              <img src="../../assets/images/employee.png" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h2>Front-End Dev</h2>
+                <h5>Name: Tim Hanley</h5>
+                <h5>ID: 4568135</h5>
+                <h5>Email:<a href="mailto:timhanley@gmail.com">timhanley@gmail.com</a></h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card p-4 my-2">
+              <img src="../../assets/images/employee.png" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h2>Front-End Dev</h2>
+                <h5>Name: Ruby Fields</h5>
+                <h5>ID: 9765231</h5>
+                <h5>Email:<a href="mailto:rubyfields@gmail.com">rubyfields@gmail.com</a></h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card p-4 my-2">
+              <img src="../../assets/images/employee.png" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h2>Back-End Dev</h2>
+                <h5>Name: Benard Fanning</h5>
+                <h5>ID: 3465126</h5>
+                <h5>Email:<a href="mailto:benardfanning@gmail.com">benardfanning@gmail.com</a></h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card p-4 my-2">
+              <img src="../../assets/images/employee.png" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h2>Cyber Security</h2>
+                <h5>Name: Suzie Moss</h5>
+                <h5>ID: 7465132</h5>
+                <h5>Email:<a href="mailto:suziemoss@gmail.com">suziemoss@gmail.com</a></h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card p-4 my-2">
+              <img src="../../assets/images/employee.png" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h2>Cyber Security</h2>
+                <h5>Name: Pete Murray</h5>
+                <h5>ID: 8457326</h5>
+                <h5>Email:<a href="mailto:petemurray@gmail.com">petemurray@gmail.com</a></h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card p-4 my-2">
+              <img src="../../assets/images/employee.png" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h2>Data Management</h2>
+                <h5>Name: Luke Mallon</h5>
+                <h5>ID: 8423651</h5>
+                <h5>Email:<a href="mailto:lukemallon@gmail.com">lukemallon@gmail.com</a></h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card p-4 my-2">
+              <img src="../../assets/images/employee.png" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h2>Sales</h2>
+                <h5>Name: Amber Topez</h5>
+                <h5>ID: 6458132</h5>
+                <h5>Email:<a href="mailto:ambertopez@gmail.com">ambertopez@gmail.com</a></h5>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -131,27 +255,50 @@
           <hr>
         </div>
         <div class="row d-flex justify-content-center align-self-normal">
-        ; 
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card p-4 my-2">
+              <img src="../../assets/images/intern.png" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h2>Cyber Security Intern</h2>
+                <h5>Name: Alex Brown</h5>
+                <h5>ID: 6453251</h5>
+                <h5>Email:<a href="mailto:alexbrown@gmail.com">alexbrown@gmail.com</a></h5>
+                <h5>School: Harvard University</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card p-4 my-2">
+              <img src="../../assets/images/intern.png" class="card-img-top" alt="...">
+              <div class="card-body text-center">
+                <h2>Sales Intern</h2>
+                <h5>Name: Felicity Favaloro</h5>
+                <h5>ID: 6545138</h5>
+                <h5>Email:<a href="mailto:felicityfavaloro@gmail.com">felicityfavaloro@gmail.com</a></h5>
+                <h5>School: University Sydney</h5>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-  crossorigin="anonymous"></script>
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
 
   <!-- Navbar Scroll -->
   <script>
-  window.onscroll = function () { scrollFunction() };
+    window.onscroll = function () { scrollFunction() };
 
-  function scrollFunction() {
-    if (document.body.scrollTop > 90 || document.documentElement.scrollTop > 90) {
-      document.getElementById("navbar").style.backgroundColor = "rgba(255,255,255,0.7)";
-    } else {
-      document.getElementById("navbar").style.backgroundColor = "transparent";
+    function scrollFunction() {
+      if (document.body.scrollTop > 90 || document.documentElement.scrollTop > 90) {
+        document.getElementById("navbar").style.backgroundColor = "rgba(255,255,255,0.7)";
+      } else {
+        document.getElementById("navbar").style.backgroundColor = "transparent";
+      }
     }
-  }
   </script>
 
 </body>

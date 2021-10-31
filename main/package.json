@@ -9,7 +9,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "jest --watch *.js"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
