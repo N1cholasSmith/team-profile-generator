@@ -13,9 +13,9 @@ const Intern = require("./lib/intern");
 
 
 // Team Member empty arrays
-let employeeArray = [];
-let engineerArray = [];
 let managerArray = [];
+let engineerArray = [];
+let employeeArray = [];
 let internArray = [];
 
 
@@ -107,36 +107,41 @@ function appChoices () {
     })
 }
 
-// ADD EMPLOYEE()>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-function addEmployee() {
-    console.log("Adding Employee")
+// ADD MANAGER()>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+function addManager() {
+    console.log("Adding Manager")
     inquirer.prompt([
         {
             type: "input",
-            message: "Employee Section:",
+            message: "Managerial Title:",
             name: "section",
             validate: (value)=>{if (value){return true} else {return "Please enter a value to continue"}},
             },
         {
             type: "input",
-            message: "Employee Name:",
+            message: "Manager Name:",
             name: "name",
             validate: (value)=>{if (value){return true} else {return "Please enter a value to continue"}},
             },
         {
             type: "input",
-            message: "Employee ID:",
+            message: "Manager ID:",
             name: "id",
             validate: (value)=>{if (value){return true} else {return "Please enter a value to continue"}},
             },
-        {
+        { 
             type: "input",
-            message: "Employee Email",
-            name: "email"
-        }
-    ]).then((employeeAns) => {
-        let employee = new Employee(employeeAns.section, employeeAns.name, employeeAns.id, employeeAns.email);
-        employeeArray.push(employee);
+            message: "Manager Email:",
+            name: "email",  
+            },
+        { 
+            type: "input",
+            message: "Office Number:",
+            name: "officeNumber",  
+            }, 
+    ]).then((managerAns) => {
+        let manager = new Manager (managerAns.section, managerAns.name, managerAns.id, managerAns.email, managerAns.officeNumber);
+        managerArray.push(manager);
         appChoices();
     });
 }
@@ -180,41 +185,36 @@ function addEngineer() {
     })
 }
 
-// ADD MANAGER()>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-function addManager() {
-    console.log("Adding Manager")
+// ADD EMPLOYEE()>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+function addEmployee() {
+    console.log("Adding Employee")
     inquirer.prompt([
         {
             type: "input",
-            message: "Managerial Title:",
+            message: "Employee Section:",
             name: "section",
             validate: (value)=>{if (value){return true} else {return "Please enter a value to continue"}},
             },
         {
             type: "input",
-            message: "Manager Name:",
+            message: "Employee Name:",
             name: "name",
             validate: (value)=>{if (value){return true} else {return "Please enter a value to continue"}},
             },
         {
             type: "input",
-            message: "Manager ID:",
+            message: "Employee ID:",
             name: "id",
             validate: (value)=>{if (value){return true} else {return "Please enter a value to continue"}},
             },
-        { 
+        {
             type: "input",
-            message: "Manager Email:",
-            name: "email",  
-            },
-        { 
-            type: "input",
-            message: "Office Number:",
-            name: "officeNumber",  
-            }, 
-    ]).then((managerAns) => {
-        let manager = new Manager (managerAns.section, managerAns.name, managerAns.id, managerAns.email, managerAns.officeNumber);
-        managerArray.push(manager);
+            message: "Employee Email",
+            name: "email"
+        }
+    ]).then((employeeAns) => {
+        let employee = new Employee(employeeAns.section, employeeAns.name, employeeAns.id, employeeAns.email);
+        employeeArray.push(employee);
         appChoices();
     });
 }

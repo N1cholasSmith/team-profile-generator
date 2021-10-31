@@ -1,23 +1,28 @@
 
 const Employee = require("../lib/employee");
 
-test("Get Name of Employee Object",() => {
-    let employee = new Employee("Nicholas Smith", "8604797","nicholas.smith13@defence.gov.au")
-    expect (employee.getName()).toBe("Nicholas Smith")
+test("Get SECTION of Employee Object",() => {
+    let intern = new Employee("Front-End Dev", "Ruby Fields", "9765231", "rubyfields@gmail.com")
+    expect (intern.getSection()).toBe("Front-End Dev")
+})
+
+test("Get NAME of Employee Object",() => {
+    let employee = new Employee("Front-End Dev", "Ruby Fields", "9765231", "rubyfields@gmail.com")
+    expect (employee.getName()).toBe("Ruby Fields")
 })
 
 test("Get ID of Employee Object",() => {
-    let employee = new Employee("Nicholas Smith", "8604797","nicholas.smith13@defence.gov.au")
-    expect (employee.getId()).toBe("8604797")
+    let employee = new Employee("Front-End Dev", "Ruby Fields", "9765231", "rubyfields@gmail.com")
+    expect (employee.getId()).toBe("9765231")
 })
 
 test("Get EMAIL of Employee Object",() => {
-    let employee = new Employee("Nicholas Smith", "8604797","nicholas.smith13@defence.gov.au")
-    expect (employee.getEmail()).toBe("nicholas.smith13@defence.gov.au")
+    let employee = new Employee("Front-End Dev", "Ruby Fields", "9765231", "rubyfields@gmail.com")
+    expect (employee.getEmail()).toBe("rubyfields@gmail.com")
 })
 
-test("Get id of Employee Object",() => {
-    let employee = new Employee("Nicholas Smith", "8604797","nicholas.smith13@defence.gov.au")
+test("Get ROLE of Employee Object",() => {
+    let employee = new Employee("Front-End Dev", "Ruby Fields", "9765231", "rubyfields@gmail.com")
     expect (employee.getRole()).toBe("Employee")
 })
 

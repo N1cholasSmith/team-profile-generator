@@ -4,6 +4,7 @@ class Manager extends Employee{
     constructor(section, name, id, email, officeNumber, ...args){
         super(section, name, id, email)
         this.officeNumber = officeNumber;
+        this.role = "Manager";
     }
     getSection(){
         return this.section
@@ -17,8 +18,8 @@ class Manager extends Employee{
     getEmail(){
         return this.email
     }
-    getRole(){
-        return "Manager"
+    getOfficeNumber(){
+        return this.officeNumber
     }
 
 }

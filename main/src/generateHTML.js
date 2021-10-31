@@ -7,7 +7,7 @@
 function managerCard(manager){
   console.log(manager)
   return `<div class="col-sm-12 col-md-6 col-lg-3">
-      <div class="card p-4" >
+      <div class="card p-4 my-2" >
           <img src="../../assets/images/manager.png" class="card-img-top" alt="...">
           <div class="card-body text-center">
               <h2>${manager.section}</h2>
@@ -24,13 +24,14 @@ function managerCard(manager){
 function engineerCard(engineer){
  console.log(engineer)
  return `<div class="col-sm-12 col-md-6 col-lg-3">
-      <div class="card p-4" >
+      <div class="card p-4 my-2" >
           <img src="../../assets/images/engineer.png" class="card-img-top" alt="...">
           <div class="card-body text-center">
               <h2>${engineer.section}</h2>
               <h5>Name:${engineer.name}</h5>
               <h5>Id:${engineer.id}</h5>
               <h5>Email:${engineer.email}</h5>
+              <h5>GitHub:${engineer.github}</h5>
           </div>
       </div>
   </div>`
@@ -40,7 +41,7 @@ function engineerCard(engineer){
 function employeeCard(employee){
   console.log(employee)
   return `<div class="col-sm-12 col-md-6 col-lg-3">
-      <div class="card p-4" >
+      <div class="card p-4 my-2" >
           <img src="../../assets/images/employee.png" class="card-img-top" alt="...">
           <div class="card-body text-center">
               <h2>${employee.section}</h2>
@@ -56,7 +57,7 @@ function employeeCard(employee){
 function internCard(intern){
   console.log(intern)
   return  `<div class="col-sm-12 col-md-6 col-lg-3">
-      <div class="card p-4" >
+      <div class="card p-4 my-2" >
           <img src="../../assets/images/intern.png" class="card-img-top" alt="...">
           <div class="card-body text-center">
               <h2>${intern.section} Intern</h2>
@@ -131,11 +132,11 @@ return `<!doctype html>
   <section id="Manager">
     <div class="container my-5 py-5">
       <div class="row mb-5">
-        <div class="col-12">
+        <div class="col-12 d-flex justify-content-center align-items-center my-3">
           <h1 class="fw-bold text-center">MANAGERS</h1>
           <hr>
         </div>
-        <div class="row d-flex justify-content-center">
+        <div class="row d-flex justify-content-center align-self-normal">
         ${managerArray.map(manager => {
           return managerCard(manager)
         }).join()};
@@ -149,11 +150,11 @@ return `<!doctype html>
   <section id="Engineer">
     <div class="container my-5 py-5">
       <div class="row mb-5">
-        <div class="col-12">
+        <div class="col-12 d-flex justify-content-center align-items-center my-3">
           <h1 class="fw-bold text-center">ENGINEERS</h1>
           <hr>
         </div>
-        <div class="row d-flex justify-content-center">
+        <div class="row d-flex justify-content-center align-self-normal">
         ${engineerArray.map(engineer => {
           return engineerCard(engineer)
         }).join()};
@@ -166,11 +167,11 @@ return `<!doctype html>
   <section id="Employee">
     <div class="container my-5 py-5">
       <div class="row mb-5">
-        <div class="col-12">
+        <div class="col-12 d-flex justify-content-center align-items-center my-3">
           <h1 class="fw-bold text-center">EMPLOYEES</h1>
           <hr>
         </div>
-        <div class="row d-flex justify-content-center">
+        <div class="row d-flex justify-content-center align-self-normal">
         ${employeeArray.map(employee => {
           return employeeCard(employee)
         }).join()};
@@ -183,11 +184,11 @@ return `<!doctype html>
   <section id="Intern">
     <div class="container my-5 py-5">
       <div class="row mb-5">
-        <div class="col-12">
+        <div class="col-12 d-flex justify-content-center align-items-center my-3">
           <h1 class="fw-bold text-center">INTERNS</h1>
           <hr>
         </div>
-        <div class="row d-flex justify-content-center">
+        <div class="row d-flex justify-content-center align-self-normal">
         ${internArray.map(intern => {
           return internCard(intern)
         }).join()}; 
@@ -205,8 +206,8 @@ return `<!doctype html>
   window.onscroll = function () { scrollFunction() };
 
   function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      document.getElementById("navbar").style.backgroundColor = "#e9ecef";
+    if (document.body.scrollTop > 90 || document.documentElement.scrollTop > 90) {
+      document.getElementById("navbar").style.backgroundColor = "rgba(255,255,255,0.7)";
     } else {
       document.getElementById("navbar").style.backgroundColor = "transparent";
     }
