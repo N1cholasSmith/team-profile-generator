@@ -166,7 +166,7 @@ return `<!doctype html>
           <hr>
         </div>
         <div class="row d-flex justify-content-center">
-        ${managerArray.map(engineer => {
+        ${engineerArray.map(engineer => {
           return engineerCard(engineer)
         }).join()};
         </div>
@@ -183,7 +183,7 @@ return `<!doctype html>
           <hr>
         </div>
         <div class="row d-flex justify-content-center">
-        ${managerArray.map(employee => {
+        ${employeeArray.map(employee => {
           return employeeCard(employee)
         }).join()};
         </div>
@@ -200,7 +200,7 @@ return `<!doctype html>
           <hr>
         </div>
         <div class="row d-flex justify-content-center">
-        ${managerArray.map(intern => {
+        ${internArray.map(intern => {
           return internCard(intern)
         }).join()}; 
         </div>
