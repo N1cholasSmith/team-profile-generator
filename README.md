@@ -7,8 +7,9 @@
 ## Description
 The Team Profile Generator is web application that utilizes Node.js modules such as Inquirer to dynamically create Manager, Engineer, Employee and Intern information cards in their respected section. Through inquirer you are promted to fill out the Employee Information which will be displayed in each card. This application features Jest to test built in functions to add an additional layer of redundancy and ease of code maintenance. The Team Profile Generator was built with Object-Orientated Programming
 
+[teamprofilegenerator.com]
 
-[teamprofilegenerator.com](https://n1cholassmith.github.io/team-profile-generator/)
+(https://n1cholassmith.github.io/team-profile-generator/)
 
 ---
 ## Table of Contents
