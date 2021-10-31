@@ -26,9 +26,10 @@ The Team Profile Generator is easily used with the assitance of Node.js NPM Inqu
 
 Jest is utilized to run tests for each constuctor file such as Manager, Engineer, Employee, and Intern with the command of "npm test". This will initiate the test and let the user know if the constructor information can be accessed correctly and therefore dynamically generated. 
 
-![Team Profile Generator Page](/assets/images/screenshot.PNG)
+![Team Profile Generator Page]https://user-images.githubusercontent.com/88865022/139579852-fd11f4de-66f9-4bd4-a10b-88b4b2faa3c4.mp4
 
 ---
+
 ## Technologies-Used
 - HTML
 - CSS 
