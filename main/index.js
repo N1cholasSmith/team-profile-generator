@@ -135,7 +135,7 @@ function addEmployee() {
             name: "email"
         }
     ]).then((employeeAns) => {
-        let employee = new Employee(employeeAns.name, employeeAns.id, employeeAns.email);
+        let employee = new Employee(employeeAns.employeeSection, employeeAns.name, employeeAns.id, employeeAns.email);
         employeeArray.push(employee);
         appChoices();
     });
@@ -174,7 +174,7 @@ function addEngineer() {
             name: "github"
         },
     ]).then((engineerAns) => {
-        let engineer = new Engineer(engineerAns.name, engineerAns.id, engineerAns.email, engineerAns.github);
+        let engineer = new Engineer(engineerAns.engineeringTitle, engineerAns.name, engineerAns.id, engineerAns.email, engineerAns.github);
         engineerArray.push(engineer);
         appChoices();
     })
@@ -213,7 +213,7 @@ function addManager() {
             name: "officeNumber",  
             }, 
     ]).then((managerAns) => {
-        let manager = new Manager (managerAns.name, managerAns.id, managerAns.email, managerAns.officeNumber);
+        let manager = new Manager (managerAns.managerTitle, managerAns.name, managerAns.id, managerAns.email, managerAns.officeNumber);
         managerArray.push(manager);
         appChoices();
     });
@@ -252,7 +252,7 @@ function addIntern() {
             name: "school"
         },
     ]).then((internAns) => {
-        let intern = new Intern(internAns.name, internAns.id, internAns.email, internAns.school);
+        let intern = new Intern(internAns.internSection, internAns.name, internAns.id, internAns.email, internAns.school);
         internArray.push(intern);
         appChoices();
     })
@@ -263,14 +263,14 @@ function init() {
     console.log(`
     ___________________________________________________________________________________________________________
 
-    THE TEAM PROFILE GENERATOR.
+                                    THE PROFESSIONAL TEAM PROFILE GENERATOR.
 
     Please input your teams personal information via prompts to dynamically generate Team Member Profile Cards.
     ___________________________________________________________________________________________________________`);
 
     inquirer.prompt(managerpromts).then((managerAns) => {
 
-        let manager = new Manager (managerAns.name, managerAns.id, managerAns.email, managerAns.officeNumber);
+        let manager = new Manager (managerAns.managerTitle, managerAns.name, managerAns.id, managerAns.email, managerAns.officeNumber);
         managerArray.push(manager);
         appChoices();
     });

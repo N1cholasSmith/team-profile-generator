@@ -1,11 +1,10 @@
-const Employee = require("../lib/employee");
-const Engineer = require("../lib/engineer");
-const Manager = require("../lib/manager");
-const Intern = require("../lib/intern");
+// const Employee = require("../lib/employee");
+// const Engineer = require("../lib/engineer");
+// const Manager = require("../lib/manager");
+// const Intern = require("../lib/intern");
 
 // MANAGER CARD GENERATE 
 function managerCard(manager){
-  //html for manager (returns a string of a bootstrap card html for the manager)
   console.log(manager)
   return `<div class="col-sm-12 col-md-6 col-lg-3">
       <div class="card p-4" >
@@ -23,10 +22,8 @@ function managerCard(manager){
 
 // ENGINEER CARD GENERATE
 function engineerCard(engineer){
-  //html for manager (returns a string of a bootstrap card html for the manager)
-  let html = "";
-  html +=
-  `<div class="col-sm-12 col-md-6 col-lg-3">
+ console.log(engineer)
+ return `<div class="col-sm-12 col-md-6 col-lg-3">
       <div class="card p-4" >
           <img src="../../assets/images/engineer.png" class="card-img-top" alt="...">
           <div class="card-body text-center">
@@ -41,9 +38,8 @@ function engineerCard(engineer){
 
 // EMPLOYEE CARD GENERATE
 function employeeCard(employee){
-  let html = "";
-  html +=
-  `<div class="col-sm-12 col-md-6 col-lg-3">
+  console.log(employee)
+  return `<div class="col-sm-12 col-md-6 col-lg-3">
       <div class="card p-4" >
           <img src="../../assets/images/employee.png" class="card-img-top" alt="...">
           <div class="card-body text-center">
@@ -54,14 +50,12 @@ function employeeCard(employee){
           </div>
       </div>
   </div>`
-  //html for manager (returns a string of a bootstrap card html for the manager)
 }
 
 // INTERN CARD GENERATE
 function internCard(intern){
-  let html = "";
-  html +=
-  `<div class="col-sm-12 col-md-6 col-lg-3">
+  console.log(intern)
+  return  `<div class="col-sm-12 col-md-6 col-lg-3">
       <div class="card p-4" >
           <img src="../../assets/images/intern.png" class="card-img-top" alt="...">
           <div class="card-body text-center">
@@ -73,15 +67,9 @@ function internCard(intern){
           </div>
       </div>
   </div>`
-  //html for manager (returns a string of a bootstrap card html for the manager)
-
 }
 
 function generateHTML(employeeArray, engineerArray, managerArray, internArray){
-  //join all html card strings for each employee
-  //iterate through employees and send to appropriate function
-  //get the card for each employee type 
-  //once all employees are dealt with call finalHTML
 
 return `<!doctype html>
 <html lang="en">
