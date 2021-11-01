@@ -6,7 +6,8 @@
 // MANAGER CARD GENERATE 
 function managerCard(manager){
   console.log(manager)
-  return `<div class="col-sm-12 col-md-6 col-lg-3">
+  return `
+  <div class="col-sm-12 col-md-6 col-lg-3">
       <div class="card p-4 my-2" >
           <img src="../../assets/images/manager.png" class="card-img-top" alt="...">
           <div class="card-body text-center">
@@ -17,13 +18,15 @@ function managerCard(manager){
               <h5>Office PH:${manager.officeNumber}</h5>
           </div>
       </div>
-  </div>`
+  </div>
+  `
 }
 
 // ENGINEER CARD GENERATE
 function engineerCard(engineer){
  console.log(engineer)
- return `<div class="col-sm-12 col-md-6 col-lg-3">
+ return `
+ <div class="col-sm-12 col-md-6 col-lg-3">
       <div class="card p-4 my-2" >
           <img src="../../assets/images/engineer.png" class="card-img-top" alt="...">
           <div class="card-body text-center">
@@ -34,13 +37,15 @@ function engineerCard(engineer){
               <h5>GitHub:<a href="https://github.com/${engineer.github}" target="_blank">${engineer.github}</a></h5>
           </div>
       </div>
-  </div>`
+  </div>
+  `
 }
 
 // EMPLOYEE CARD GENERATE
 function employeeCard(employee){
   console.log(employee)
-  return `<div class="col-sm-12 col-md-6 col-lg-3">
+  return `
+  <div class="col-sm-12 col-md-6 col-lg-3">
       <div class="card p-4 my-2" >
           <img src="../../assets/images/employee.png" class="card-img-top" alt="...">
           <div class="card-body text-center">
@@ -50,13 +55,15 @@ function employeeCard(employee){
               <h5>Email:<a href="mailto:${employee.email}">${employee.email}</a></h5>
           </div>
       </div>
-  </div>`
+  </div>
+  `
 }
 
 // INTERN CARD GENERATE
 function internCard(intern){
   console.log(intern)
-  return  `<div class="col-sm-12 col-md-6 col-lg-3">
+  return  `
+  <div class="col-sm-12 col-md-6 col-lg-3">
       <div class="card p-4 my-2" >
           <img src="../../assets/images/intern.png" class="card-img-top" alt="...">
           <div class="card-body text-center">
@@ -67,7 +74,8 @@ function internCard(intern){
               <h5>School:${intern.school}</h5>
           </div>
       </div>
-  </div>`
+  </div>
+  `
 }
 
 function generateHTML(employeeArray, engineerArray, managerArray, internArray){
@@ -139,7 +147,7 @@ return `<!doctype html>
         <div class="row d-flex justify-content-center align-self-normal">
         ${managerArray.map(manager => {
           return managerCard(manager)
-        }).join()}
+          }).join("")}
         </div>
       </div>
     </div>
@@ -157,7 +165,7 @@ return `<!doctype html>
         <div class="row d-flex justify-content-center align-self-normal">
         ${engineerArray.map(engineer => {
           return engineerCard(engineer)
-        }).join()}
+          }).join("")}
         </div>
       </div>
     </div>
@@ -174,7 +182,7 @@ return `<!doctype html>
         <div class="row d-flex justify-content-center align-self-normal">
         ${employeeArray.map(employee => {
           return employeeCard(employee)
-        }).join()}
+          }).join("")}
         </div>
       </div>
     </div>
@@ -191,7 +199,7 @@ return `<!doctype html>
         <div class="row d-flex justify-content-center align-self-normal">
         ${internArray.map(intern => {
           return internCard(intern)
-        }).join()} 
+          }).join("")} 
         </div>
       </div>
     </div>
